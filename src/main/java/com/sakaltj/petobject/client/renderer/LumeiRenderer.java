@@ -1,4 +1,4 @@
-package com.sakalti.petobject.client.renderer;
+package com.sakaltj.petobject.client.renderer;
 
 import com.sakalti.petobject.client.model.LumeiModel;
 import com.sakalti.petobject.entity.LumeiEntity;
