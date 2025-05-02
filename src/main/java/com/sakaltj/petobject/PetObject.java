@@ -1,4 +1,4 @@
-package com.sakalti.petobject;
+package com.sakaltj.petobject;
 
 import com.sakalti.petobject.entity.EntityRegistry;
 import net.fabricmc.api.ModInitializer;
