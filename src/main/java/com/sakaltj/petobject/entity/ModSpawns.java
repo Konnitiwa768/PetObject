@@ -51,8 +51,35 @@ public class ModSpawns {
         SpawnRestriction.register(
             EntityRegistry.LUMEI,
             SpawnRestriction.Location.ON_GROUND,
+            Heighpackage com.sakalti.petobject;
+
+import com.sakalti.petobject.entity.EntityRegistry;
+import net.fabricmc.fabric.api.biome.v1.BiomeModifications;
+import net.fabricmc.fabric.api.biome.v1.BiomeSelectors;
+import net.minecraft.entity.SpawnGroup;
+import net.minecraft.util.registry.RegistryKey;
+import net.minecraft.world.Heightmap;
+import net.minecraft.world.biome.Biome;
+import net.minecraft.entity.SpawnRestriction;
+
+public class ModSpawns {
+    public static void register() {
+        // Lumei
+        BiomeModifications.addSpawn(BiomeSelectors.categories(Biome.Category.FOREST, Biome.Category.PLAINS),
+            SpawnGroup.CREATURE, EntityRegistry.LUMEI, 10, 1, 2);
+
+        SpawnRestriction.register(EntityRegistry.LUMEI,
+            SpawnRestriction.Location.ON_GROUND,
             Heightmap.Type.MOTION_BLOCKING_NO_LEAVES,
-            (type, world, reason, pos, random) -> world.getTimeOfDay() % 24000 >= 13000
-        );
+            (type, world, reason, pos, random) -> world.getTimeOfDay() % 24000 >= 13000);
+
+        // Mechanyl
+        BiomeModifications.addSpawn(BiomeSelectors.all(),
+            SpawnGroup.MONSTER, EntityRegistry.MECHANYL, 8, 1, 2);
+
+        SpawnRestriction.register(EntityRegistry.MECHANYL,
+            SpawnRestriction.Location.ON_GROUND,
+            Heightmap.Type.MOTION_BLOCKING_NO_LEAVES,
+            (type, world, reason, pos, random) -> world.getTimeOfDay() % 24000 >= 13000);
     }
 }
