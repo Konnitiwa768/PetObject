@@ -27,4 +27,4 @@ jobs:
           git commit -m "置き換え"
           git push https://github.com/${{ github.repository }}.git HEAD:${{ github.ref }} --force
         env:
-          GITHUB_TOKEN: ${{ secrets.SECRET_KEY }}
+          GITHUB_TOKEN: ${{ secrets.SECRET_TOKEN }}
