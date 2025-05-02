@@ -1,4 +1,4 @@
-package com.sakalti.petobject.client.model;
+package com.sakaltj.petobject.client.model;
 
 import com.sakalti.petobject.entity.LumeiEntity;
 import net.minecraft.client.model.*;
