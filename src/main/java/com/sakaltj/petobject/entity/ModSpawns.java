@@ -28,6 +28,29 @@ public class LumeiSpawn {
         SpawnRestriction.register(
             EntityRegistry.LUMEI,
             SpawnRestriction.Location.ON_GROUND,
+            Heipackage com.sakalti.petobject;
+
+import com.sakalti.petobject.entity.EntityRegistry;
+import net.fabricmc.fabric.api.biome.v1.BiomeModifications;
+import net.fabricmc.fabric.api.biome.v1.BiomeSelectors;
+import net.minecraft.entity.SpawnGroup;
+import net.minecraft.util.registry.RegistryKey;
+import net.minecraft.world.Heightmap;
+import net.minecraft.world.biome.Biome;
+import net.minecraft.entity.SpawnRestriction;
+
+public class ModSpawns {
+    public static void register() {
+        BiomeModifications.addSpawn(
+            BiomeSelectors.categories(Biome.Category.FOREST, Biome.Category.PLAINS),
+            SpawnGroup.CREATURE,
+            EntityRegistry.LUMEI,
+            10, 1, 2
+        );
+
+        SpawnRestriction.register(
+            EntityRegistry.LUMEI,
+            SpawnRestriction.Location.ON_GROUND,
             Heightmap.Type.MOTION_BLOCKING_NO_LEAVES,
             (type, world, reason, pos, random) -> world.getTimeOfDay() % 24000 >= 13000
         );
