@@ -3,7 +3,7 @@ name: ファイル名置き換え
 on:
   push:
     branches:
-     - 1.21
+     - main
 
 jobs:
   replace-text:
