@@ -1,4 +1,4 @@
-package com.sakalti.petobject.entity;
+package com.sakaltj.petobject.entity;
 
 import net.minecraft.entity.*;
 import net.minecraft.entity.ai.goal.*;
