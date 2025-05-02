@@ -1,4 +1,4 @@
-package com.sakalti.petobject;
+package com.sakaltj.petobject;
 
 import com.sakalti.petobject.entity.LumeiEntity;
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricEntityTypeBuilder;
